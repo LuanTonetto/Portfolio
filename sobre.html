@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Sobre Mim - Luan Tonetto</title> <!-- Título da aba do navegador -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"/>
+  <link rel="shortcut icon" href="icons8-negócios-cloud-96.png">
+  <style>
+    /* Aplica box-sizing border-box a todos os elementos */
+    * {
+      box-sizing: border-box;
+    }
+    /* Estilos base para o corpo da página */
+    body {
+      font-family: 'Poppins', sans-serif; /* Fonte da página */
+      background-color: #f0f2f5;          /* Cor de fundo clara */
+      margin: 0;                         /* Remove margem padrão */
+      padding: 0;                        /* Remove padding padrão */
+      color: #333;                      /* Cor do texto */
+      scroll-behavior: smooth;          /* Rolagem suave para âncoras */
+    }
+    /* Estilo para a barra de navegação */
+    nav {
+      background-color: #1f1f1f;         /* Fundo escuro */
+      padding: 15px 0;                   /* Espaçamento vertical */
+      position: sticky;                  /* Fixa a nav no topo ao rolar */
+      top: 0;                           /* Posiciona no topo da viewport */
+      z-index: 1000;                    /* Fica acima de outros elementos */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    }
+    /* Lista horizontal do menu */
+    .menu {
+      list-style: none;                 /* Remove marcadores da lista */
+      display: flex;                   /* Exibe os itens em linha */
+      justify-content: center;         /* Centraliza os itens */
+      margin: 0;                      /* Remove margens */
+      padding: 0;                     /* Remove padding */
+    }
+    /* Espaçamento entre itens da lista */
+    .menu li {
+      margin: 0 20px;
+    }
+    /* Estilos dos links do menu */
+    .menu a {
+      text-decoration: none;           /* Remove sublinhado */
+      color: #fff;                     /* Cor branca */
+      font-weight: 600;                /* Peso da fonte */
+      font-size: 16px;                 /* Tamanho da fonte */
+      transition: 0.3s;                /* Transição suave para hover */
+    }
+    /* Cor do link quando o mouse está sobre ele */
+    .menu a:hover {
+      color: #fc7e00;                  /* Cor laranja */
+    }
+    /* Estilos do cabeçalho principal */
+    header {
+      background: linear-gradient(to right, #ff9100, #00ecfc); /* Degradê laranja para azul */
+      color: black;                   /* Cor do texto */
+      padding: 80px 20px;            /* Espaçamento interno */
+      text-align: center;            /* Centraliza texto */
+      animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+    }
+    /* Estilo do título no header */
+    header h1 {
+      margin: 0;                    /* Remove margem */
+      font-size: 36px;              /* Tamanho grande */
+    }
+    /* Estilo do conteúdo principal */
+    main {
+      max-width: 900px;             /* Largura máxima */
+      margin: 40px auto;            /* Centraliza horizontalmente com margem superior */
+      padding: 0 20px;              /* Espaçamento lateral */
+      display: flex;                /* Usa flexbox */
+      flex-wrap: wrap;              /* Permite quebra de linha */
+      gap: 30px;                   /* Espaço entre elementos */
+      animation: fadeIn 1.5s ease forwards; /* Animação suave */
+    }
+    /* Estilo dos títulos dentro da div texto */
+    .texto h2 {
+      flex: 2 1 500px;             /* Flex-grow e base para responsividade */
+      font-size: 16px;             /* Tamanho da fonte */
+      line-height: 1.8;            /* Espaçamento entre linhas */
+      color: #ff9100;              /* Cor laranja */
+    }
+    /* Estilo do bloco de destaque ao lado */
+    .destaque {
+      flex: 1 1 250px;             /* Flexbox para responsividade */
+      background: white;           /* Fundo branco */
+      border-left: 5px solid #fc7e00; /* Barra laranja à esquerda */
+      padding: 20px;               /* Espaçamento interno */
+      border-radius: 8px;          /* Bordas arredondadas */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra leve */
+      font-weight: 600;            /* Texto em negrito */
+      color: #ff9100;              /* Cor do texto laranja */
+    }
+    /* Lista dentro do destaque */
+    .destaque ul {
+      list-style: inside disc;     /* Marcadores dentro da área */
+      padding-left: 0;             /* Remove recuo */
+      margin: 0;                   /* Remove margem */
+    }
+    /* Estilo do rodapé */
+    footer {
+      background-color: black;      /* Fundo preto */
+      color: white;                 /* Texto branco */
+      text-align: center;           /* Centraliza texto */
+      padding: 20px;                /* Espaçamento interno */
+      margin-top: 80px;             /* Espaço acima do rodapé */
+    }
+    /* Animação de fade-in com deslocamento vertical */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Estilos para telas menores que 720px */
+    @media(max-width: 720px){
+      main {
+        flex-direction: column;    /* Alinha elementos em coluna */
+      }
+      .destaque {
+        order: -1;                 /* Move o destaque para cima */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação principal -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre Mim</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho da página -->
+  <header>
+    <h1>Sobre Mim</h1>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="texto">
+      <h2>Quem Sou</h2>
+      <p>Sou o Luan Tonetto, estudante de Análise e Desenvolvimento de Sistemas, com grande interesse em aprender e crescer na área de Tecnologia da Informação.</p>
+      <p>Tenho conhecimentos em: lógica de programação, HTML, CSS, JavaScript e Python. Estou sempre buscando aprimorar minhas habilidades através de projetos pessoais, cursos e experiências práticas.</p>
+      <h2>Objetivos</h2>
+      <p>Busco uma oportunidade para aplicar meus conhecimentos em um ambiente profissional, contribuindo com soluções eficientes e aprendendo com os desafios do dia a dia.</p>
+      <p>Sou comprometido, curioso por tecnologia e acredito na inovação como ferramenta para transformar ideias em realidade.</p>
+    </div>
+
+    <!-- Bloco de destaques -->
+    <aside class="destaque">
+      <h3>Destaques</h3>
+      <ul>
+        <li>Comprometido e dedicado</li>
+        <li>Aprendizado constante</li>
+        <li>Boa comunicação</li>
+        <li>Focado em resultados</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <p>© 2025 Luan Tonetto. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

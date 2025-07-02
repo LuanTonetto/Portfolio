@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+   <title>Contato - Luan Tonetto</title> <!-- Título que aparece na aba do navegador -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+ <link rel="shortcut icon" href="icons8-negócios-cloud-96.png"><!-- Ícone da aba do navegador (favicon) -->
+
+  <style>
+   
+    * {
+      box-sizing: border-box; /* Aplica box-sizing para todos os elementos */
+    }
+
+    
+    body {               /* Estilo global do body */
+      font-family: 'Poppins', sans-serif; /* Define a fonte da página */
+      background-color: #f0f2f5; /* Cor de fundo clara */
+      margin: 0;
+      padding: 0;
+      color: #333; /* Cor padrão do texto */
+      scroll-behavior: smooth; /* Suaviza a rolagem ao clicar em âncoras */
+    }
+
+    
+    nav {  /* Barra de navegação fixa no topo */
+      background-color: #1f1f1f; /* Fundo escuro */
+      padding: 15px 0;
+      position: sticky; /* Fixa no topo ao rolar a página */
+      top: 0;
+      z-index: 1000; /* Fica acima de outros elementos */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra inferior leve */
+    }
+
+   
+    .menu {  /* Lista do menu de navegação */
+      list-style: none; /* Remove bolinhas */
+      display: flex; /* Itens lado a lado */
+      justify-content: center; /* Centraliza os itens */
+      margin: 0;
+      padding: 0;
+    }
+
+ 
+    .menu li {    /* Cada item do menu */
+      margin: 0 20px;      
+    }
+
+   
+    .menu a {  /* Estilo dos links do menu */
+      text-decoration: none; /* Remove sublinhado */
+      color: #fff; /* Cor branca */
+      font-weight: 600;   /* Espessura da fonte */
+      font-size: 16px;    /* Tamanho da fonte*/      
+      transition: 0.3s; /* Animação suave */
+    }
+
+ 
+    .menu a:hover {         /* Cor ao passar o mouse */
+      color: #fc7e00;
+    }
+
+    /* Cabeçalho da página */
+    header {
+      background: linear-gradient(to right, #ff9100, #00ecfc); /* Degradê */
+      color: black;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+    }
+
+    
+    header h1 { /* Título do cabeçalho */
+      margin: 0;
+      font-size: 36px;
+    }
+
+    
+    main {    /* Conteúdo principal */
+      max-width: 600px; /* Largura máxima */
+      margin: 60px auto; /* Centraliza com margem superior/inferior */
+      padding: 0 20px;
+      animation: fadeIn 1.3s ease forwards; /* Animação de entrada */
+    }
+
+
+    .contato-info {     /* Bloco de informações de contato */
+      background: white;
+      border-left: 5px solid #fc7e00; /* Faixa lateral laranja */
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Sombra */
+      margin-bottom: 40px;
+    }
+
+   
+    .contato-info h2 {      /* Título do bloco de contato */
+      color: #fc7e00;
+      border-left: 5px solid #fc7e00;
+      padding-left: 12px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    
+    .contato-info p {      /* Parágrafos dentro do bloco */
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+ 
+    .contato-info a {        /* Links dentro do bloco */
+      color: #ff8400;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contato-info a:hover {     /* Hover nos links */
+      text-decoration: underline;
+    }
+
+    
+    .botoes-sociais {        /* Área dos botões sociais */
+      margin-top: 20px;
+      display: flex;
+      gap: 15px; /* Espaço entre botões */
+      color: white;
+    }
+
+    
+    .btn-social {           /* Estilo dos botões sociais */
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #050000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-social:hover {     /* Altera a cor de fundo do botão social quando o mouse passa por cima */
+      background-color: #fc7e00;
+    }
+
+    
+    .formulario-contato {     /* Bloco do formulário de contato */
+      background-color: white;
+      border-left: 5px solid #fc7e00;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    
+    .formulario-contato h2 {         /* Título do formulário */
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-left: 5px solid #fc7e00;
+      padding-left: 12px;
+    }
+
+   
+    .formulario-contato form {         /* Layout do formulário */
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    .formulario-contato label {             /* Rótulos dos campos */
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    
+    .formulario-contato input,             /* Campos de input e textarea */
+    .formulario-contato textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    
+    .formulario-contato button {           /* Botão de envio do formulário */
+      background-color: #fc7e00;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+   
+    .formulario-contato button:hover {        /* Hover no botão de envio */
+      background-color: #e56f00;
+    }
+
+   
+    footer {                  /* Rodapé da página */
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 100px;
+      margin-top: 200px;
+    }
+
+    
+    @keyframes fadeIn {              /* Animação de entrada (fade in) */
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navegação principal -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre Mim</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho com o título da página -->
+  <header>
+    <h1>Contato</h1>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main>
+
+    <!-- Bloco com informações e links sociais -->
+    <div class="contato-info">
+      <h2>Fale Comigo</h2>
+      <div class="botoes-sociais">
+        <a class="btn-social" href="https://www.linkedin.com/in/luan-tonetto-471543345/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a class="btn-social" href="https://github.com/LuanTonetto" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Seção do formulário para envio de mensagem -->
+    <section class="formulario-contato">
+      <h2>❖ Envie uma Mensagem</h2>
+      <form action="#" method="post"> 
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <p>© 2025 Luan Tonetto. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

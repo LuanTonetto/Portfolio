@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Projetos</title> <!-- Título da aba do navegador -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"/>
+  <link rel="shortcut icon" href="icons8-negócios-cloud-96.png">
+  <style> 
+    /* Aplica box-sizing border-box e remove margens e paddings de todos os elementos */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos base para html e body */
+    html, body {
+      height: 100%; /* Altura total da tela */
+      font-family: 'Poppins', sans-serif; /* Fonte padrão */
+      background-color: #f0f2f5; /* Fundo claro */
+      color: #333; /* Cor do texto */
+      scroll-behavior: smooth; /* Rolagem suave */
+      display: flex; /* Flexbox para estruturar o layout */
+      flex-direction: column; /* Coluna para organizar conteúdo verticalmente */
+    }
+
+    /* Corpo ocupa todo o espaço disponível */
+    body {
+      flex: 1;
+    }
+
+    /* Main também ocupa todo o espaço possível */
+    main {
+      flex: 1;
+    }
+
+    /* Estilos da barra de navegação */
+    nav {
+      background-color: #1f1f1f; /* Fundo escuro */
+      padding: 15px 0; /* Espaçamento vertical */
+      position: sticky; /* Fixa no topo ao rolar */
+      top: 0; /* Posição topo */
+      z-index: 1000; /* Fica acima de outros elementos */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    }
+
+    /* Lista do menu horizontal */
+    .menu {
+      list-style: none; /* Remove marcadores */
+      display: flex; /* Exibe itens em linha */
+      justify-content: center; /* Centraliza itens */
+    }
+
+    /* Espaçamento entre itens do menu */
+    .menu li {
+      margin: 0 20px;
+    }
+
+    /* Estilos dos links do menu */
+    .menu a {
+      text-decoration: none; /* Remove sublinhado */
+      color: #fff; /* Cor branca */
+      font-weight: 600; /* Peso da fonte */
+      font-size: 16px; /* Tamanho da fonte */
+      transition: 0.3s; /* Transição suave */
+    }
+
+    /* Cor do link ao passar o mouse */
+    .menu a:hover {
+      color: #fc7e00; /* Laranja */
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      background: linear-gradient(to right, #ff9100, #00ecfc); /* Degradê laranja para azul */
+      color: #000; /* Cor do texto */
+      padding: 80px 20px; /* Espaçamento interno */
+      text-align: center; /* Centraliza texto */
+    }
+
+    /* Título do header com animação */
+    header h1 {
+      font-size: 36px; /* Tamanho grande */
+      margin-bottom: 10px; /* Espaço abaixo */
+      animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+    }
+
+    /* Seção de projetos com grid responsivo */
+    section.projetos {
+      max-width: 1000px; /* Largura máxima */
+      margin: 40px auto; /* Centraliza com margem superior */
+      padding: 0 20px; /* Espaçamento lateral */
+      display: grid; /* Usa grid layout */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
+      gap: 2rem; /* Espaçamento entre cards */
+    }
+
+    /* Estilo dos cards dos projetos */
+    .card {
+      background-color: #fff; /* Fundo branco */
+      border-radius: 10px; /* Bordas arredondadas */
+      padding: 2rem; /* Espaçamento interno */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+      transition: transform 0.3s ease; /* Transição para hover */
+      text-align: center; /* Centraliza texto */
+    }
+
+    /* Efeito hover nos cards */
+    .card:hover {
+      transform: translateY(-5px); /* Eleva levemente o card */
+    }
+
+    /* Título do card */
+    .card h3 {
+      font-size: 1.5rem; /* Tamanho da fonte */
+      color: #ff8400; /* Cor laranja */
+      margin-bottom: 1rem; /* Espaço abaixo */
+    }
+
+    /* Parágrafo do card */
+    .card p {
+      font-size: 1rem; /* Tamanho normal */
+      color: #555; /* Cor cinza */
+      margin-bottom: 1.5rem; /* Espaço abaixo */
+    }
+
+    /* Link no card estilizado como botão */
+    .card a {
+      display: inline-block; /* Para aplicar padding */
+      padding: 0.75rem 1.5rem; /* Espaçamento interno */
+      background-color: #ff8400; /* Fundo laranja */
+      color: white; /* Texto branco */
+      border-radius: 30px; /* Bordas arredondadas */
+      text-decoration: none; /* Remove sublinhado */
+      font-weight: 600; /* Negrito */
+      transition: background-color 0.3s ease; /* Transição do fundo */
+    }
+
+    /* Cor do botão ao passar o mouse */
+    .card a:hover {
+      background-color: #e56f00; /* Laranja escuro */
+    }
+
+    /* Estilo do rodapé */
+    footer {
+      background-color: black; /* Fundo preto */
+      color: white; /* Texto branco */
+      text-align: center; /* Centraliza texto */
+      padding: 50px 20px; /* Espaçamento interno */
+      margin-top: auto; /* Força rodapé ficar na base */
+    }
+
+    /* Animação de fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegação principal -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre Mim</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Cabeçalho da página -->
+    <header>
+      <h1>Meus Projetos</h1>
+    </header>
+
+    <!-- Seção de projetos com cards -->
+    <section class="projetos">
+      <div class="card">
+        <h3>Projeto 1</h3>
+        <p>Site institucional para a empresa VSB Serviços, com foco em apresentação e serviços prestados.</p>
+        <a href="https://luantonetto.github.io/VSB/" target="_blank">Ver Projeto</a>
+      </div>
+      <div class="card">
+        <h3>Projeto 2</h3>
+        <p>Interface de login personalizada para acesso interno aos sistemas da VSB Serviços.</p>
+        <a href="https://luantonetto.github.io/VSB-login/" target="_blank">Ver Projeto</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer>
+    <p>© 2025 Luan Tonetto. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+

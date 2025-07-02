@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Luan Tonetto</title><!-- Título da aba do navegador -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"/>
+  <link rel="shortcut icon" href="icons8-negócios-cloud-96.png">
+<style>
+
+* {
+  box-sizing: border-box; /* Aplica box-sizing border-box a todos os elementos */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Fonte da página */
+  background-color: #f0f2f5;          /* Cor de fundo */
+  margin: 0;                         /* Remove margem padrão */
+  padding: 0;                        /* Remove padding padrão */
+  color: #333;                      /* Cor do texto */
+  scroll-behavior: smooth;          /* Rolagem suave */
+}
+
+/* Estilo para os blocos de informação */
+.info-bloco {
+  background-color: white;           /* Fundo branco */
+  border-left: 4px solid #ff9100;   /* Barra laranja na esquerda */
+  padding: 15px 20px;                /* Espaçamento interno */
+  margin-bottom: 20px;               /* Espaço embaixo */
+  border-radius: 8px;                /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* Sombra leve */
+}
+
+.info-bloco h3 {
+  margin-top: 0;                   /* Remove margem superior */
+  color: #ff9100;                 /* Cor laranja */
+}
+
+/* Estilo do menu de navegação */
+nav {
+  background-color: #1f1f1f;       /* Fundo escuro */
+  padding: 15px 0;                 /* Espaçamento vertical */
+  position: sticky;                /* Fixa no topo */
+  top: 0;                         /* No topo da página */
+  z-index: 1000;                  /* Sobre outros elementos */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.menu {
+  list-style: none;               /* Remove marcadores */
+  display: flex;                  /* Itens em linha */
+  justify-content: center;        /* Centraliza itens */
+  margin: 0;                     /* Remove margem */
+  padding: 0;                    /* Remove padding */
+}
+
+.menu li {
+  margin: 0 20px;                /* Espaço entre os itens */
+}
+
+.menu a {
+  text-decoration: none;         /* Remove sublinhado */
+  color: #fff;                   /* Cor branca */
+  font-weight: 600;              /* Peso da fonte */
+  font-size: 16px;               /* Tamanho da fonte */
+  transition: 0.3s;              /* Transição suave */
+}
+
+.menu a:hover {
+  color: #fc7e00;               /* Cor laranja ao passar o mouse */
+}
+
+/* Estilo do cabeçalho */
+header {
+  background: linear-gradient(to right, #ff9100, #00ecfc); /* Degradê */
+  color: rgb(0, 0, 0);           /* Cor do texto */
+  padding: 80px 20px;            /* Espaçamento interno */
+  text-align: center;            /* Centraliza o texto */
+}
+
+header h1 {
+  font-size: 36px;               /* Tamanho do título */
+  margin-bottom: 10px;           /* Espaço abaixo */
+  animation: fadeIn 1s ease-in-out; /* Animação */
+}
+
+header p {
+  font-size: 20px;               /* Tamanho do texto */
+  font-weight: 300;              /* Peso da fonte */
+  animation: fadeIn 1.5s ease-in-out; /* Animação */
+}
+
+/* Estilo da seção principal */
+section {
+  max-width: 900px;              /* Largura máxima */
+  margin: 40px auto;             /* Centraliza e espaça verticalmente */
+  padding: 0 20px;               /* Espaçamento lateral */
+}
+
+h2 {
+  font-size: 26px;               /* Tamanho do título */
+  color: #ff8400;                /* Cor laranja */
+  border-left: 4px solid #ff8400; /* Barra na esquerda */
+  padding-left: 12px;            /* Espaçamento da barra ao texto */
+  margin-bottom: 15px;           /* Espaço abaixo */
+}
+
+p {
+  line-height: 1.8;              /* Espaçamento entre linhas */
+  font-size: 16px;               /* Tamanho do texto */
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: black;       /* Fundo preto */
+  color: white;                  /* Texto branco */
+  text-align: center;            /* Centraliza o texto */
+  padding: 20px;                 /* Espaçamento interno */
+  margin-top: 200px;             /* Espaço acima */
+}
+
+/* Animação de fade-in com deslocamento para cima */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); } /* Começa invisível e deslocado pra cima */
+  to { opacity: 1; transform: translateY(0); }       /* Termina visível e na posição */
+}
+  </style>
+</head>
+
+<body>
+
+<!-- Menu de navegação com links para outras páginas -->
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre Mim</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- Cabeçalho da página com título e subtítulo -->
+<header>
+  <h1>Bem-vindo ao meu Portfólio</h1>
+  <p></p>
+  <p>Desenvolvedor Web e Estudante de ADS</p>
+</header>
+
+<!-- Seção com informações principais divididas em blocos -->
+<section>
+
+  <!-- Bloco de formação acadêmica -->
+  <div class="info-bloco">
+    <h3>🎓 Formação</h3>
+    <p>Estudante de Análise e Desenvolvimento de Sistemas com foco em desenvolvimento web.</p>
+  </div>
+
+  <!-- Bloco de habilidades técnicas -->
+  <div class="info-bloco">
+    <h3>💡 Habilidades</h3>
+    <p>HTML, CSS, JavaScript, Python, lógica de programação, Git e GitHub.</p>
+  </div>
+
+  <!-- Bloco com objetivo profissional -->
+  <div class="info-bloco">
+    <h3>🚀 Objetivo</h3>
+    <p>Busco minha primeira oportunidade na área de TI para crescer profissionalmente.</p>
+  </div>
+
+</section>
+
+
+
+<!-- Rodapé da página -->
+<footer>
+  <p>© 2025 Luan Tonetto. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
+
+
